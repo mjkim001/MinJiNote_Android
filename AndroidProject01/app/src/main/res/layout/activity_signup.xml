@@ -4,35 +4,54 @@
     android:layout_height="match_parent"
     android:paddingLeft="130px"
     android:paddingRight="130px"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="사용자 계정 생성"
+        android:layout_marginTop="50px"
+        android:textColor="@color/navy"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
 
     <ImageView
-        android:id="@+id/image1"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/hannamuni_img"
-        android:layout_marginTop="70dp"
-        android:adjustViewBounds="true"/>
+        android:adjustViewBounds="true"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:src="@drawable/image"
+        android:maxHeight="100dp"/>
 
     <EditText
-        android:id="@+id/edit1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15sp"
-        android:hint="ID 입력"
+        android:hint="ID"
         android:drawableStart="@drawable/edittext_id_size"
         android:drawablePadding="10dp"
         android:layout_marginTop="80dp"
         />
 
     <EditText
-        android:id="@+id/edit2"
+    android:id="@+id/edit2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="15sp"
+    android:hint="암호"
+    android:drawableStart="@drawable/edittext_pass_size"
+    android:drawablePadding="10dp"
+    android:layout_marginTop="20dp"
+    />
+
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15sp"
-        android:hint="암호 입력"
-        android:drawableStart="@drawable/edittext_pass_size"
+        android:hint="이름"
+        android:drawableStart="@drawable/edittext_id_size"
         android:drawablePadding="10dp"
         android:layout_marginTop="20dp"
         />
@@ -43,19 +62,8 @@
         android:background="@color/navy"
         android:backgroundTint="@color/navy"
         android:layout_marginTop="100dp"
-        android:text="Login"
+        android:text="가입"
         android:textColor="@color/white"
-        android:onClick="mOnClick"
-        />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:backgroundTint="@color/white"
-        android:layout_marginTop="20dp"
-        android:text="SIGN UP"
-        android:textColor="@color/navy"
         android:onClick="mOnClick"
         />
 </LinearLayout>
