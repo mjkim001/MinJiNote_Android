@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <stroke android:color="@color/red"/> <!-- 외각선 color : @color/gray -->
+        </shape>
+    </item>
+    <item android:bottom="3dp"> <!-- 아래쪽만 외각선을 그린다.-->
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white"/> <!-- 외각선 안의 바탕 색상-->
+        </shape>
+    </item>
+</layer-list>
+
+<!-- 메시지가 추가될때 textview밑에 들어갈 테두리 설정-->

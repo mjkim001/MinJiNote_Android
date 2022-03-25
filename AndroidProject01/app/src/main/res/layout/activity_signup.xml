@@ -22,18 +22,40 @@
         android:adjustViewBounds="true"
         android:layout_marginTop="50dp"
         android:layout_gravity="center"
-        android:src="@drawable/image"
+        android:src="@drawable/images"
         android:maxHeight="100dp"/>
 
-    <EditText
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:hint="ID"
-        android:drawableStart="@drawable/edittext_id_size"
-        android:drawablePadding="10dp"
-        android:layout_marginTop="80dp"
-        />
+        android:orientation="horizontal"
+        android:layout_marginTop="80dp"> <!-- 수평 -->
+
+        <EditText
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:hint="ID"
+            android:drawableStart="@drawable/edittext_id_size"
+            android:drawablePadding="10dp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/navy"
+            android:backgroundTint="@color/navy"
+            android:layout_marginLeft="5dp"
+            android:text="CHECK"
+            android:textColor="@color/white"
+            android:onClick="checkOnClick"
+            />
+
+    </LinearLayout>
+
+
+
+
 
     <EditText
     android:id="@+id/edit2"

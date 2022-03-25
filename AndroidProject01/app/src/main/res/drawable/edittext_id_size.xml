@@ -6,3 +6,5 @@
         android:height="50px">
     </item>
 </layer-list>
+
+<!--아이콘 크기 설정하는 xml파일-->
