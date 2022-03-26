@@ -32,6 +32,7 @@
         android:layout_marginTop="80dp"> <!-- 수평 -->
 
         <EditText
+            android:id="@+id/signup_id"
             android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:textSize="15sp"
@@ -54,19 +55,16 @@
     </LinearLayout>
 
 
-
-
-
     <EditText
-    android:id="@+id/edit2"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textSize="15sp"
-    android:hint="암호"
-    android:drawableStart="@drawable/edittext_pass_size"
-    android:drawablePadding="10dp"
-    android:layout_marginTop="20dp"
-    />
+        android:id="@+id/signup_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:hint="암호"
+        android:drawableStart="@drawable/edittext_pass_size"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="20dp"
+        />
 
     <EditText
         android:layout_width="match_parent"

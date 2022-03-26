@@ -37,7 +37,7 @@
                 android:src="@drawable/mail"
                 />
             <TextView
-                android:id="@+id/desc1"
+                android:id="@+id/mail_id1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/mail1"
@@ -51,7 +51,7 @@
                 android:id="@+id/content1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@id/desc1"
+                android:layout_alignLeft="@id/mail_id1"
                 android:layout_alignParentBottom="true"
                 android:text="메일 제목"
                 android:layout_marginBottom="5dp"
@@ -88,7 +88,7 @@
                 android:src="@drawable/mail"
                 />
             <TextView
-                android:id="@+id/desc2"
+                android:id="@+id/mail_id2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/mail2"
@@ -102,7 +102,7 @@
                 android:id="@+id/content2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@id/desc2"
+                android:layout_alignLeft="@id/mail_id2"
                 android:layout_alignParentBottom="true"
                 android:text="메일 제목"
                 android:layout_marginBottom="5dp"
@@ -138,22 +138,22 @@
                 android:layout_marginRight="15dp"
                 android:src="@drawable/mail"
                 />
+
             <TextView
-                android:id="@+id/desc3"
+                android:id="@+id/mail_id3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/mail3"
                 android:layout_marginTop="2dp"
-                android:textSize="20sp"
-                android:textStyle="bold"
+                android:layout_toRightOf="@id/mail3"
                 android:text="aaa (변경)"
-                />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/content3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@id/desc3"
+                android:layout_alignLeft="@id/mail_id3"
                 android:layout_alignParentBottom="true"
                 android:text="메일 제목"
                 android:layout_marginBottom="5dp"

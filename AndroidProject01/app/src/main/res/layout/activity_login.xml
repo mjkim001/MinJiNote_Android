@@ -16,7 +16,7 @@
         android:adjustViewBounds="true"/>
 
     <EditText
-        android:id="@+id/edit_id"
+        android:id="@+id/login_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15sp"
@@ -27,7 +27,7 @@
         />
 
     <EditText
-        android:id="@+id/edit_pass"
+        android:id="@+id/login_pass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15sp"

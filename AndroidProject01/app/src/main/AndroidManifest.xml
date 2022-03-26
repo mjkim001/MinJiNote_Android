@@ -18,6 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MailActivity" android:label="MailActivity" />
+        <activity android:name=".SignUpActivity" android:label="SignUpActivity" />
     </application>
 
 </manifest>
