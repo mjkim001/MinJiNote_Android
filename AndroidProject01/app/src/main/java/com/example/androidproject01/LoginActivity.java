@@ -16,8 +16,7 @@ public class LoginActivity extends AppCompatActivity {
     TextView loginId; //로그인 창에서 입력받은 id저장
     TextView loginPass; //로그인 창에서 입력받은 pass저장
 
-    String intentId; //회원가입 창에서 입력받은 id저장
-    String intentPass; //회원가입 창에서 입력받은 pass저장
+    User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +30,7 @@ public class LoginActivity extends AppCompatActivity {
         activityResultLauncher = registerForActivityResult(new
                 ActivityResultContracts.StartActivityForResult(), result -> {
             if (result.getResultCode() == RESULT_OK) { //회원가입을 완료했을경우
-                User user = (User) result.getData().getSerializableExtra("UserInfo");
-                intentId = user.getId();
-                intentPass = user.getPass();
+                user = (User) result.getData().getSerializableExtra("UserInfo");
             }
         });
 
@@ -48,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
                 String id = loginId.getText().toString();
                 String pass = loginPass.getText().toString();
 
-                if(id.equals(intentId) && pass.equals(intentPass)){ //아이디 & 비밀번호가 일치할 경우
+                if(id.equals(user.getId) && pass.equals(user.getPass)){ //아이디 & 비밀번호가 일치할 경우
                     Intent intent = new Intent(this, MailActivity.class);
 
                     intent.putExtra("ID", id);
@@ -57,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
                 }else{ //아이디 & 비밀번호가 일치하지 않을 경우
                     //일치하지 않으면 "잘못입력하였습니다." 메시지 출력
                     String str = "잘못입력하였습니다";
-                    Toast.makeText(this, str+id+intentId, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
                 }
 
                 break;
