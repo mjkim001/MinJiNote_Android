@@ -18,15 +18,21 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> temp;
     ArrayAdapter<String> adapter;
     ListView list;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         items = new ArrayList<String>();
+        temp = new ArrayList<String>();
+
         items.add("First");
         items.add("Second");
         items.add("Third");
         items.add("Fourth");
         items.add("Fifth");
+
+        temp.addAll(items); //backup용
+
         adapter = new ArrayAdapter<String>
                 (this, android.R.layout.simple_list_item_multiple_choice, items);
         list = (ListView) findViewById(R.id.list);
@@ -36,11 +42,13 @@ public class MainActivity extends AppCompatActivity {
     public void mOnClick(View v) {
         EditText ed = (EditText) findViewById(R.id.newitem);
         EditText ed2 = (EditText) findViewById(R.id.searchitem);
+        EditText search = (EditText) findViewById(R.id.searchitem);
         switch (v.getId()) {
             case R.id.add:
                 String text = ed.getText().toString();
                 if (text.length() != 0) {
                     items.add(text);
+                    temp.add(text);
                     ed.setText("");
                     adapter.notifyDataSetChanged();
                 }
@@ -51,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
                     for (int i = list.getCount() - 1; i >= 0; i--) {
                         if (sb.get(i)) {
                             items.remove(i);
+                            temp.remove(i);
                         }
                     }
                     list.clearChoices();
@@ -59,16 +68,20 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.search:
                 String text2 = ed2.getText().toString();
-                //데이터에서 입력받은 문자가 포함된 contain, 리스트만 출력
-                //원본 데이터를 저장하는 리스트,
-                //결과 출력용 리스트
-                //adapter에 갈아끼우는 방식으로
-                temp.addAll((Collection<? extends String>) list);
-                ((Collection<?>) list).clear();
-                for(int i = 0; i < temp.size(); i++){
-                    if(temp.contains(text2)){
-                        //items.add(i);
+
+                items.clear();
+
+                if(text2 == "") {
+                    items.addAll(temp);
+                }
+                else {
+                    for(int i = 0; i < temp.size(); i++) {
+                        if(temp.get(i).toUpperCase().contains(text2.toUpperCase())) { //대소문자 구분없이 검색가능
+                            //검색한 문자를 대문자로 만들어 검색한다.
+                            items.add(temp.get(i));
+                        }
                     }
+                    adapter.notifyDataSetChanged();
                 }
         }
     }
