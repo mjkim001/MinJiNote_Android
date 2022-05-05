@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/editTextId"
+        android:layout_width="358dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="ID"
+        android:inputType="textPersonName" />
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="358dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editTextId"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="72dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword" />
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="358dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editTextId"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="131dp"
+        android:onClick="onClickLogin"
+        android:text="LOGIN" />
+    <TextView
+        android:id="@+id/textViewRegister"
+        android:layout_width="358dp"
+        android:layout_height="34dp"
+        android:layout_alignStart="@+id/editTextId"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="192dp"
+        android:text="REGISTER"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:onClick="onClick"
+        />
+</RelativeLayout>
