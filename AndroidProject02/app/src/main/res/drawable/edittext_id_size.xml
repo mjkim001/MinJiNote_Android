@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/id_icon"
+        android:width="50px"
+        android:height="50px">
+    </item>
+</layer-list>
+
+    <!--아이콘 크기 설정하는 xml파일-->
