@@ -19,7 +19,7 @@
         android:maxHeight="100dp"/>
 
     <TextView
-        android:id="@+id/signup_id"
+        android:id="@+id/change_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15sp"
@@ -32,7 +32,7 @@
 
 
     <EditText
-        android:id="@+id/signup_pass"
+        android:id="@+id/change_pwd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15sp"
@@ -43,6 +43,7 @@
         />
 
     <EditText
+        android:id="@+id/change_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15sp"
@@ -53,6 +54,7 @@
         />
 
     <Button
+        android:id="@+id/btn_updateUserInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/navy"
@@ -60,6 +62,5 @@
         android:layout_marginTop="100dp"
         android:text="변경"
         android:textColor="@color/white"
-        android:onClick="mOnClick"
         />
 </LinearLayout>

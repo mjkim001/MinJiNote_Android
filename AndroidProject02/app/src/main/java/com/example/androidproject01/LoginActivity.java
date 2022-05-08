@@ -10,7 +10,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
@@ -33,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         loginPass = (TextView) findViewById(R.id.login_pass);
         saveLogin = (CheckBox) findViewById(R.id.saveLogin);
 
-        userDBHelper = UserDBHelper.getInstance(this);
+        userDBHelper = new UserDBHelper(this);
 
         //저장된 값을 불러오기 위해 같은 네임파일을 찾음.
         SharedPreferences sf = getSharedPreferences("saveLogin",MODE_PRIVATE);
@@ -99,12 +98,19 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 cursor.close();
 
+
                 break;
             case R.id.signup:
                 //signup페이지로 이동
                 Intent intent = new Intent(this, SignUpActivity.class);
-                activityResultLauncher.launch(intent);
+                startActivity(intent);
                 break;
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        userDBHelper.close();
+        super.onDestroy();
     }
 }

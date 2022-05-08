@@ -14,7 +14,7 @@ public class UserDBHelper extends SQLiteOpenHelper {
     //singleton
 
     // Context는 현재 실행중인 Activity를 의미(Activity가 Context에 상속되었기 때문에 this시 해당 액티비티 리턴)
-    private UserDBHelper(Context context) {
+    public UserDBHelper(Context context) {
         // 데이터 베이스 만들기(User.db로 만듬)
         super(context,"User.db",null,1);
         // 쓰기 전용 DB 객체
@@ -22,27 +22,6 @@ public class UserDBHelper extends SQLiteOpenHelper {
         // 읽기 전용 DB 객체
         readableDB = getReadableDatabase();
     }
-
-    public static UserDBHelper getInstance(Context context) {
-        if(userDBHelper == null) userDBHelper = new UserDBHelper(context);
-
-        return userDBHelper;
-    }
-
-
-//    // Context는 현재 실행중인 Activity를 의미(Activity가 Context에 상속되었기 때문에 this시 해당 액티비티 리턴)
-//    public UserDBHelper(Context context){
-//        // 데이터 베이스 만들기(contact.db로 만듬)
-//        super(context,"User.db",null,1);
-//        // 쓰기 전용 DB 객체
-//        writableDB = getWritableDatabase();
-//        // 읽기 전용 DB 객체
-//        readableDB = getReadableDatabase();
-//    }
-
-
-
-
 
     //DB 만들때 자동으로 호출됨(테이블 생성)
     @Override
@@ -64,19 +43,33 @@ public class UserDBHelper extends SQLiteOpenHelper {
         writableDB.insert("User", null, values);
     }
 
-    // Cursor를 사용해 select를 사용해 받아온 값을 리턴해줌
+    public void updateUserInfo(User user){
+        writableDB.execSQL(
+                "UPDATE User " +
+                   "SET USER_PWD = '" + user.getPass() +"'," +
+                       "USER_NAME = '"+ user.getName() +"'" +
+                 "WHERE USER_ID = '" + user.getId() + "'");
+    }
 
+
+
+    // Cursor를 사용해 select를 사용해 받아온 값을 리턴해줌
     // 아이디 비밀번호 일치 확인
     public Cursor getUserExist(String id, String pwd) {
         String selectQuery = "SELECT count(*) as count FROM User WHERE USER_ID = '" + id +"' AND USER_PWD = '" + pwd + "'";
         return readableDB.rawQuery(selectQuery, null);
     }
 
-
-
     // 아이디 유효성 검사
     public Cursor getIdExist(String id) {
         String selectQuery = "SELECT count(*) as count FROM User WHERE USER_ID = '" + id + "'";
+
+        return readableDB.rawQuery(selectQuery, null);
+    }
+
+    // 로그인한 계정 이름 가져오기
+    public Cursor getName(String id) {
+        String selectQuery = "SELECT USER_NAME FROM User WHERE USER_ID = '" + id + "'";
 
         return readableDB.rawQuery(selectQuery, null);
     }
