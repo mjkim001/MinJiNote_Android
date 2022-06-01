@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
+
     <EditText
         android:id="@+id/editTextId"
         android:layout_width="338dp"
@@ -15,6 +16,7 @@
         android:ems="10"
         android:hint="ID"
         android:inputType="textPersonName" />
+
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="338dp"
@@ -26,6 +28,7 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPersonName" />
+
     <EditText
         android:id="@+id/editTextAge"
         android:layout_width="338dp"
@@ -37,6 +40,7 @@
         android:ems="10"
         android:hint="Age"
         android:inputType="textPersonName" />
+
     <EditText
         android:id="@+id/editTextName"
         android:layout_width="338dp"
@@ -48,6 +52,7 @@
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName" />
+
     <Button
         android:id="@+id/buttonRegister"
         android:layout_width="340dp"
@@ -55,6 +60,6 @@
         android:layout_alignStart="@+id/editTextId"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="205dp"
-        android:onClick="onClick"
-        android:text="Register" />
+        android:text="Register"
+        android:onClick="onClick"/>
 </RelativeLayout>

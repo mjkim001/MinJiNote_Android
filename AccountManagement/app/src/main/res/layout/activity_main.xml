@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
     <TextView
         android:id="@+id/textViewWelcome"
         android:layout_width="349dp"
@@ -13,6 +14,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:textSize="18sp" />
+
     <TextView
         android:id="@+id/textViewId"
         android:layout_width="349dp"
@@ -22,6 +24,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="122dp"
         android:textSize="14sp" />
+
     <TextView
         android:id="@+id/textViewPassword"
         android:layout_width="349dp"
@@ -31,6 +34,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="225dp"
         android:textSize="14sp" />
+
     <TextView
         android:id="@+id/textView11"
         android:layout_width="349dp"
@@ -39,8 +43,9 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="71dp"
-        android:textSize="24sp"
-        android:text="ID" />
+        android:text="ID"
+        android:textSize="24sp" />
+
     <TextView
         android:id="@+id/textView12"
         android:layout_width="349dp"
@@ -49,6 +54,17 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="173dp"
-        android:textSize="24sp"
-        android:text="Password" />
+        android:text="Password"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/buttonManagement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="185dp"
+        android:text="Account Management"
+        android:onClick="accountManagement"
+        />
 </RelativeLayout>

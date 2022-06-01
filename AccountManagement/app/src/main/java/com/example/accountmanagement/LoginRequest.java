@@ -12,6 +12,7 @@ import java.util.Map;
 public class LoginRequest extends StringRequest {
     final static private String URL = "http://minjikim.dothome.co.kr/AccountManagement/Login.php";
     private Map<String, String> parameters;
+
     public LoginRequest(String userID, String userPassword, Response.Listener<String> listener) {
         super(Method.POST, URL, listener, new Response.ErrorListener() {
             @Override
@@ -23,6 +24,8 @@ public class LoginRequest extends StringRequest {
         parameters.put("userID", userID);
         parameters.put("userPassword", userPassword);
     }
+
+
     @Override
     public Map<String, String> getParams() {
         return parameters;
