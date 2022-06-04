@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_gallery">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.androidproject01.ui.home.HomeFragment"
+        android:label="메시지 작성"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.androidproject01.ui.gallery.GalleryFragment"
+        android:label="받은 메시지 함"
+        tools:layout="@layout/fragment_gallery">
+        <action
+            android:id="@+id/action_home_to_detail"
+            app:destination="@id/nav_maildetail"/>
+        </fragment>
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.androidproject01.ui.slideshow.SlideshowFragment"
+        android:label="개인 정보 설정"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_maildetail"
+        android:name="com.example.androidproject01.ui.gallery.DetailFragment"
+        android:label="메시지 읽기"
+        tools:layout="@layout/fragment_maildetail"/>
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.example.androidproject01.ui.exit.ExitFragment"
+        tools:layout=""/>
+</navigation>

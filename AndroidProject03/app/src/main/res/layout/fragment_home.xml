@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment"
+    android:orientation="vertical"
+    android:paddingLeft="130px"
+    android:paddingRight="130px">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        >
+
+        <Button
+            android:id="@+id/btn_textReset"
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:text="취소"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            android:id="@+id/btn_sendMessage"
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:text="보내기"
+            android:background="@color/blue"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="받는이"/>
+
+        <EditText
+            android:id="@+id/mail_recipient"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="받는이를 입력하세요"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/mail_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="제목"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:id="@+id/mail_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="내용을 입력하게요"
+        android:gravity="top"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        />
+</LinearLayout>

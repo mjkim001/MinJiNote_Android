@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="130px"
+    android:paddingRight="130px"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/hannamuni_img"
+        android:layout_marginTop="70dp"
+        android:adjustViewBounds="true"/>
+
+    <EditText
+        android:id="@+id/login_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:hint="ID 입력"
+        android:drawableStart="@drawable/edittext_id_size"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="80dp"
+        />
+
+    <EditText
+        android:id="@+id/login_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:hint="암호 입력"
+        android:drawableStart="@drawable/edittext_pass_size"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <CheckBox
+        android:id="@+id/saveLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그인 저장"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/navy"
+        android:backgroundTint="@color/navy"
+        android:layout_marginTop="90dp"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:onClick="mOnClick"
+        />
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="20dp"
+        android:text="SIGN UP"
+        android:textColor="@color/navy"
+        android:onClick="mOnClick"
+        />
+</LinearLayout>
