@@ -14,7 +14,7 @@ public class MailDBHelper extends SQLiteOpenHelper {
     // Context는 현재 실행중인 Activity를 의미(Activity가 Context에 상속되었기 때문에 this시 해당 액티비티 리턴)
     public MailDBHelper(Context context) {
         // 데이터 베이스 만들기(Mail.db로 만듬)
-        super(context,"Mail.db",null,6);
+        super(context,"Mail.db",null,1);
         // 쓰기 전용 DB 객체
         writableDB = getWritableDatabase();
         // 읽기 전용 DB 객체

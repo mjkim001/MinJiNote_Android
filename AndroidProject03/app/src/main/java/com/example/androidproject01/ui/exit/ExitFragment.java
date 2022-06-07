@@ -8,11 +8,11 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.androidproject01.databinding.FragmentGalleryBinding;
+import com.example.androidproject01.databinding.FragmentReceiveMailBinding;
 
 public class ExitFragment extends Fragment {
 
-    private FragmentGalleryBinding binding;
+    private FragmentReceiveMailBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         getActivity().finishAffinity();

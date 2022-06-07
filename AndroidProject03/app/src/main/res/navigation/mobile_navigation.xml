@@ -7,29 +7,35 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.androidproject01.ui.home.HomeFragment"
+        android:name="com.example.androidproject01.ui.mail.WriteMessageFragment"
         android:label="메시지 작성"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_write_message" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.androidproject01.ui.gallery.GalleryFragment"
+        android:name="com.example.androidproject01.ui.mail.ReceiveMailFragment"
         android:label="받은 메시지 함"
-        tools:layout="@layout/fragment_gallery">
+        tools:layout="@layout/fragment_receive_mail">
         <action
             android:id="@+id/action_home_to_detail"
             app:destination="@id/nav_maildetail"/>
         </fragment>
 
     <fragment
+        android:id="@+id/nav_sendmail"
+        android:name="com.example.androidproject01.ui.mail.SendMailFragment"
+        android:label="보낸 메시지 함"
+        tools:layout="@layout/fragment_send_mail" />
+
+    <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.androidproject01.ui.slideshow.SlideshowFragment"
+        android:name="com.example.androidproject01.ui.info.ChangeUserInfoFragment"
         android:label="개인 정보 설정"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_change_user_info" />
 
     <fragment
         android:id="@+id/nav_maildetail"
-        android:name="com.example.androidproject01.ui.gallery.DetailFragment"
+        android:name="com.example.androidproject01.ui.mail.DetailFragment"
         android:label="메시지 읽기"
         tools:layout="@layout/fragment_maildetail"/>
 
@@ -37,4 +43,7 @@
         android:id="@+id/nav_logout"
         android:name="com.example.androidproject01.ui.exit.ExitFragment"
         tools:layout=""/>
+
+
+
 </navigation>

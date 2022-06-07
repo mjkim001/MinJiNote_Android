@@ -6,11 +6,13 @@ public class User implements Serializable {
     String id;
     String pass;
     String name;
+    String major;
 
-    public User(String id, String pass, String name) {
+    public User(String id, String pass, String name, String major) {
         this.id = id;
         this.pass = pass;
         this.name = name;
+        this.major = major;
     }
     public String getId() {
         return id;
@@ -20,5 +22,8 @@ public class User implements Serializable {
     }
     public String getName() {
         return name;
+    }
+    public String getMajor() {
+        return major;
     }
 }

@@ -1,7 +1,6 @@
 package com.example.androidproject01;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,8 +8,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.androidproject01.ui.gallery.DetailFragment;
 
 import java.util.ArrayList;
 

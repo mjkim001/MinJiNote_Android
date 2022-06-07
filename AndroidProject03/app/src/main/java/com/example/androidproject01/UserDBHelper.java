@@ -16,7 +16,7 @@ public class UserDBHelper extends SQLiteOpenHelper {
     // Context는 현재 실행중인 Activity를 의미(Activity가 Context에 상속되었기 때문에 this시 해당 액티비티 리턴)
     public UserDBHelper(Context context) {
         // 데이터 베이스 만들기(User.db로 만듬)
-        super(context,"User.db",null,1);
+        super(context,"User.db",null,3);
         // 쓰기 전용 DB 객체
         writableDB = getWritableDatabase();
         // 읽기 전용 DB 객체
@@ -26,7 +26,7 @@ public class UserDBHelper extends SQLiteOpenHelper {
     //DB 만들때 자동으로 호출됨(테이블 생성)
     @Override
     public void onCreate(SQLiteDatabase db){
-        db.execSQL("CREATE TABLE User (USER_ID TEXT PRIMARY KEY, USER_PWD TEXT, USER_NAME TEXT);");
+        db.execSQL("CREATE TABLE User (USER_ID TEXT PRIMARY KEY, USER_PWD TEXT, USER_NAME TEXT, USER_MAJOR TEXT);");
     }
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
@@ -40,6 +40,7 @@ public class UserDBHelper extends SQLiteOpenHelper {
         values.put("USER_ID", user.getId());
         values.put("USER_PWD", user.getPass());
         values.put("USER_NAME", user.getName());
+        values.put("USER_MAJOR", user.getMajor());
         writableDB.insert("User", null, values);
     }
 
@@ -47,7 +48,8 @@ public class UserDBHelper extends SQLiteOpenHelper {
         writableDB.execSQL(
                 "UPDATE User " +
                         "SET USER_PWD = '" + user.getPass() +"'," +
-                        "USER_NAME = '"+ user.getName() +"'" +
+                        "USER_NAME = '"+ user.getName() +"'," +
+                        "USER_MAJOR = '"+ user.getMajor() +"'"+
                         "WHERE USER_ID = '" + user.getId() + "'");
     }
 
@@ -70,6 +72,13 @@ public class UserDBHelper extends SQLiteOpenHelper {
     // 로그인한 계정 이름 가져오기
     public Cursor getName(String id) {
         String selectQuery = "SELECT USER_NAME FROM User WHERE USER_ID = '" + id + "'";
+
+        return readableDB.rawQuery(selectQuery, null);
+    }
+
+    // 로그인한 계정 학과 가져오기
+    public Cursor getMajor(String id) {
+        String selectQuery = "SELECT USER_MAJOR FROM User WHERE USER_ID = '" + id + "'";
 
         return readableDB.rawQuery(selectQuery, null);
     }
