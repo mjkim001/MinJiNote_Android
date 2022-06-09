@@ -16,7 +16,7 @@ public class UserDBHelper extends SQLiteOpenHelper {
     // Context는 현재 실행중인 Activity를 의미(Activity가 Context에 상속되었기 때문에 this시 해당 액티비티 리턴)
     public UserDBHelper(Context context) {
         // 데이터 베이스 만들기(User.db로 만듬)
-        super(context,"User.db",null,3);
+        super(context,"User.db",null,1);
         // 쓰기 전용 DB 객체
         writableDB = getWritableDatabase();
         // 읽기 전용 DB 객체
@@ -79,6 +79,13 @@ public class UserDBHelper extends SQLiteOpenHelper {
     // 로그인한 계정 학과 가져오기
     public Cursor getMajor(String id) {
         String selectQuery = "SELECT USER_MAJOR FROM User WHERE USER_ID = '" + id + "'";
+
+        return readableDB.rawQuery(selectQuery, null);
+    }
+
+    // 로그인한 계정 비밀번호 가져오기
+    public Cursor getPwd(String id) {
+        String selectQuery = "SELECT USER_PWD FROM User WHERE USER_ID = '" + id + "'";
 
         return readableDB.rawQuery(selectQuery, null);
     }

@@ -1,7 +1,6 @@
 package com.example.androidproject01;
 
 import android.content.Intent;
-import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,12 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.MyViewHolder>{
+public class MySendMailRecyclerViewAdapter extends RecyclerView.Adapter<MySendMailRecyclerViewAdapter.MyViewHolder>{
     static ArrayList<Mail> arrayList;
     View itemView;
     static NavMailActivity activity;
 
-    public MyRecyclerViewAdapter(ArrayList<Mail> arrayList, NavMailActivity activity) {
+    public MySendMailRecyclerViewAdapter(ArrayList<Mail> arrayList, NavMailActivity activity) {
         this.arrayList = arrayList;
         this.activity = activity;
     }
@@ -68,7 +67,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
                     intent.putExtra("mail_title",mail_title);
                     intent.putExtra("mail_content",mail_content);
                     intent.putExtra("mail_time",mail_time);
-                    intent.putExtra("fragment_name","DetailFragment");
+                    intent.putExtra("fragment_name","SendMailDetailFragment");
                     activity.startActivity(intent);
                 }
             });

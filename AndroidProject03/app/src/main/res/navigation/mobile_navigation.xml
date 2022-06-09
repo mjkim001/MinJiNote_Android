@@ -16,16 +16,22 @@
         android:name="com.example.androidproject01.ui.mail.ReceiveMailFragment"
         android:label="받은 메시지 함"
         tools:layout="@layout/fragment_receive_mail">
+
         <action
-            android:id="@+id/action_home_to_detail"
-            app:destination="@id/nav_maildetail"/>
-        </fragment>
+            android:id="@+id/action_nav_gallery_to_nav_maildetail"
+            app:destination="@id/nav_maildetail" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_sendmail"
         android:name="com.example.androidproject01.ui.mail.SendMailFragment"
         android:label="보낸 메시지 함"
-        tools:layout="@layout/fragment_send_mail" />
+        tools:layout="@layout/fragment_send_mail" >
+
+        <action
+            android:id="@+id/action_nav_sendmail_to_nav_sendmaildetail"
+            app:destination="@id/nav_sendmaildetail" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_slideshow"
@@ -38,6 +44,12 @@
         android:name="com.example.androidproject01.ui.mail.DetailFragment"
         android:label="메시지 읽기"
         tools:layout="@layout/fragment_maildetail"/>
+
+    <fragment
+        android:id="@+id/nav_sendmaildetail"
+        android:name="com.example.androidproject01.ui.mail.SendMailDetailFragment"
+        android:label="메시지 읽기"
+        tools:layout="@layout/fragment_send_mail_detail"/>
 
     <fragment
         android:id="@+id/nav_logout"

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="130px"
+    android:paddingRight="130px">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+
+        <Button
+            android:layout_width="95dp"
+            android:layout_height="30dp"
+            android:text="뒤로"
+            android:textColor="@color/white"
+            android:background="@color/blue"
+            />
+        <Button
+            android:layout_width="95dp"
+            android:layout_height="30dp"
+            android:text="삭제"
+            android:textColor="@color/white"
+            android:background="@color/blue"
+            android:layout_marginLeft="10dp"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="보낸이"/>
+
+        <TextView
+            android:id="@+id/mailSender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="보낸이"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="받은이"/>
+
+        <TextView
+            android:id="@+id/mailRecipient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="받은이"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="제목"/>
+
+        <TextView
+            android:id="@+id/mailTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="제목"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="보낸일시"/>
+
+        <TextView
+            android:id="@+id/mailTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="보낸일시"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/blue"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="내용"/>
+
+        <TextView
+            android:id="@+id/mailContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="내용"/>
+
+    </LinearLayout>
+
+</LinearLayout>

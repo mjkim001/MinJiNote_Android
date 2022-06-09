@@ -36,7 +36,6 @@ public class SignUpActivity extends AppCompatActivity {
 
     //추가
     ImageView imageView;
-    Bitmap img;
     Spinner spinner;
     PhotoDBHelper photoDBHelper;
 
@@ -114,6 +113,7 @@ public class SignUpActivity extends AppCompatActivity {
 //        System.out.println("///////////////////////////////////");
 //        System.out.println(img);
 //        System.out.println(i_img);
+
         //입력한 값 User객체로 만들기
 
         User user = new User(i_id, i_pwd, i_name, i_major);

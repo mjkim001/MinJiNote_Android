@@ -70,6 +70,13 @@ public class ChangeUserInfoFragment extends Fragment {
         String loginID = sf.getString("id","");
         id.setText(loginID);
 
+        //비밀번호 가져오기
+        Cursor cursor_pwd = userDBHelper.getPwd(loginID);
+        cursor_pwd.moveToNext(); //moveToNext()를 호출하여 첫 레코드로 이동
+        String s_pwd = cursor_pwd.getString(cursor_pwd.getColumnIndexOrThrow("USER_PWD"));
+        pwd.setText(s_pwd);
+        cursor_pwd.close();
+
         //이름 가져오기
         Cursor cursor_name = userDBHelper.getName(loginID);
         cursor_name.moveToNext(); //moveToNext()를 호출하여 첫 레코드로 이동

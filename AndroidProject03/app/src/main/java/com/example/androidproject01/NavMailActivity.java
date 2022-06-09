@@ -45,8 +45,8 @@ public class NavMailActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
-        //추가
-        //galleryFragment에서 DetailFragment로 이동할때
+
+        //DetailFragment로 이동할때
         Intent intent = getIntent();
 
         if(intent.getStringExtra("mail_sender") != null){
@@ -68,7 +68,15 @@ public class NavMailActivity extends AppCompatActivity {
 
             editor.commit();
 
-            navController.navigate(R.id.action_home_to_detail);
+//            String fragment_name = intent.getStringExtra("fragment_name");
+//            System.out.println("fragment_name : "+fragment_name);
+//            if(fragment_name.equals("DetailFragment")){
+//                navController.navigate(R.id.action_nav_gallery_to_nav_maildetail);
+//            }
+//            if(fragment_name.equals("SendMailDetailFragment")){
+//                navController.navigate(R.id.action_nav_sendmail_to_nav_sendmaildetail);
+//            }
+            navController.navigate(R.id.action_nav_gallery_to_nav_maildetail);
         }
 
 

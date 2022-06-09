@@ -11,7 +11,7 @@ import android.net.Uri;
 public class PhotoDBHelper extends SQLiteOpenHelper {
     SQLiteDatabase writableDB, readableDB;
     public PhotoDBHelper(Context context) {
-        super(context, "Photo.db", null, 3);
+        super(context, "Photo.db", null, 1);
         readableDB = getReadableDatabase();
         writableDB = getWritableDatabase();
     }

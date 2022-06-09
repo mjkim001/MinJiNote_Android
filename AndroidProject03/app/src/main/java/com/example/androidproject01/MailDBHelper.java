@@ -49,4 +49,11 @@ public class MailDBHelper extends SQLiteOpenHelper {
 
         return readableDB.rawQuery(selectQuery, null);
     }
+
+    // 로그인한 사용자가 보낸 메일 가져오기
+    public Cursor getMySendMailList(String id) {
+        String selectQuery = "SELECT * FROM Mail WHERE MAIL_SENDER = '" + id + "'";
+
+        return readableDB.rawQuery(selectQuery, null);
+    }
 }

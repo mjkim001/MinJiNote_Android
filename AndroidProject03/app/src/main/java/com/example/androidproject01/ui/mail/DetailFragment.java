@@ -1,11 +1,14 @@
 package com.example.androidproject01.ui.mail;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -21,13 +24,12 @@ public class DetailFragment extends Fragment {
 
     private FragmentReceiveMailBinding binding;
 
-    MailDBHelper mailDBHelper;
-
     TextView mailSender, mailRecipient, mailTitle, mailTime,mailContent;
+
+    Button button;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         NavMailActivity activity = (NavMailActivity)getActivity();
-        mailDBHelper = new MailDBHelper(activity);
 
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_maildetail, container, false);
 
@@ -53,13 +55,11 @@ public class DetailFragment extends Fragment {
         mailContent.setText(mail_content);
 
 
-
         return rootView;
     }
 
     @Override
     public void onDestroyView() {
-        mailDBHelper.close();
         super.onDestroyView();
         binding = null;
     }
