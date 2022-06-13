@@ -6,3 +6,4 @@
 4) <a href="https://github.com/mjkim001/MinJiNote_Android/tree/main/AndroidTest04/app/src/main"> fragment 연습 </a>
 5) <a href="https://github.com/mjkim001/MinJiNote_Android/tree/main/AndroidTest05/app/src/main"> navigater 연습 </a>
 6) <a href="https://github.com/mjkim001/MinJiNote_Android/tree/main/AndroidTest06/app/src/main"> handler를 사용한 timer 이용, onClick과 onLongClick함수 </a>
+7) <a href="https://github.com/mjkim001/MinJiNote_Android/tree/main/AndroidTest07/app/src/main"> listView 연습 </a>
